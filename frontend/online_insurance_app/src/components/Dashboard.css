@@ -1,0 +1,38 @@
+/* Welcome Text Styling */
+.welcome-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #9b59b6; /* Purple color for welcome text */
+}
+
+/* Button Styling */
+.custom-button {
+  background-color: #9b59b6; /* Purple color for button */
+  border-color: #9b59b6;
+  color: white;
+}
+
+.custom-button:hover {
+  background-color: #8e44ad; /* Lighter purple on hover */
+  border-color: #8e44ad;
+  color: white;
+}
+/* Welcome Text Styling */
+.welcome-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #9b59b6; /* Purple color for welcome text */
+}
+
+/* Button Styling */
+.custom-button {
+  background-color: #9b59b6; /* Purple color for button */
+  border-color: #9b59b6;
+  color: white;
+}
+
+.custom-button:hover {
+  background-color: #8e44ad; /* Lighter purple on hover */
+  border-color: #8e44ad;
+  color: white;
+}

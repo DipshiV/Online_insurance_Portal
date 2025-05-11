@@ -1,0 +1,31 @@
+/* Sidebar with light gray background and black text */
+.sidebar {
+  background-color: #f4f4f4; /* Light gray background */
+  color: black; /* Black text */
+  min-height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #ddd; /* Optional border for separation */
+}
+
+/* Sidebar links */
+.sidebar .nav-link {
+  color: #333; /* Dark text for better visibility */
+  font-weight: 500;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #e2e6ea; /* Light gray on hover */
+  color: #000; /* Make text darker on hover */
+}
+
+/* Profile image styling */
+.sidebar img {
+  border-radius: 50%;
+  background-color: white;
+  padding: 2px;
+}
+
+/* Text color for the profile name */
+.sidebar h5 {
+  color: #333; /* Dark text */
+}
