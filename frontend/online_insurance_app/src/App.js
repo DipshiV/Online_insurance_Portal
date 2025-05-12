@@ -18,6 +18,8 @@ import ViewAvailablePolicies from './components/ViewPolicies.js';
 import MyPolicies from './components/MyPolicies.js';
 import AddPolicyForm from './components/AddPolicyForm.js';
 import ManagePolicies from './components/ManagePolicies.js';
+import About from './components/About.js';
+import Home from './components/Home.js';
 function App() {
   return (
     <Router>
@@ -26,9 +28,11 @@ function App() {
       
       <div className="container mt-4 main-content">
         <Routes>
+        <Route path='/' element={<Home/>}></Route>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/about' element={<About/>}></Route>
           <Route element={<ProtectedLayout role="admin" />}>
               <Route path="/admin-dashboard" element={<AdminDashboard />} />
               <Route path="/admin/contact-messages" element={<AdminContactMessages />} />

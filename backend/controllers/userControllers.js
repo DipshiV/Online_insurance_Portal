@@ -58,12 +58,34 @@ export const getAllUsers = async (req, res) => {
   }
 };
 
-export const deleteUser = async (req, res) => {
-  const userId = req.params.id;
+// Ensure you're importing db properly
 
+export const deleteUser = async (req, res) => {
   try {
+    const userId = req.params.id;
+
+    if (!userId) {
+      console.error('User ID is required');
+      return res.status(400).json({ error: 'User ID is required' });
+    }
+
+    // Step 1: Check if user has any applied policies
+    const [appliedPolicies] = await db.execute(
+      'SELECT * FROM applied_policies WHERE user_id = ?',
+      [userId]
+    );
+
+    if (appliedPolicies.length > 0) {
+      return res.status(400).json({
+        error: 'Cannot delete user. User has applied policies.',
+      });
+    }
+
+    // Step 2: Delete user
     await db.execute('DELETE FROM users WHERE id = ?', [userId]);
+
     res.status(200).json({ message: 'User deleted successfully' });
+
   } catch (err) {
     console.error('Delete error:', err);
     res.status(500).json({ error: 'Failed to delete user' });

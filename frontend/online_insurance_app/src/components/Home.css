@@ -1,0 +1,19 @@
+/* src/components/Home.css */
+
+.home-page {
+  height: 100vh;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

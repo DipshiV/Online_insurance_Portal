@@ -1,0 +1,35 @@
+.about-container {
+  background-color: #f8f9fa;
+}
+
+.about-insurance p {
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.team-card {
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-image {
+  width: 200px;               /* Fixed width */
+  height: 250px;              /* Fixed height */
+  object-fit: cover;          /* Ensures the image covers the frame without distortion */
+  border-radius: 50%;         /* Makes the image circular. Use 10px or none for square. */
+  border: 2px solid #ccc;     /* Optional: adds a border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+}
+
+.team-desc {
+  font-size: 0.95rem;
+  color: #666;
+  padding: 0 10px;
+}
